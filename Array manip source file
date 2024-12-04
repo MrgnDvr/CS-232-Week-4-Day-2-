@@ -1,0 +1,16 @@
+#include<iostream>
+#include"ArrayManip.h"
+using namespace std;
+
+int main() {
+	int myArr[] = { 5,1,4,2,3 };
+	int sizeOfArr = sizeof(myArr) / sizeof(myArr[0]);
+	ArrayManip myArrObj(myArr, sizeOfArr);
+
+	cout << "Contents of the array" << endl;
+	myArrObj.printArray();
+	cout << "Contents of the array in reverse" << endl;
+	myArrObj.printArrayRev();
+
+	return 0;
+}
