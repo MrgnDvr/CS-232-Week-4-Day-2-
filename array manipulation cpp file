@@ -1,0 +1,33 @@
+#include<iostream>
+#include"ArrayManip.h"
+using namespace std;
+
+ArrayManip::ArrayManip(int* arrValuesPar, int arraySizePar) {
+	arraySize = arraySizePar;
+	ptrArr = new int[arraySize];
+	for (int i = 0; i < arraySize; i++)
+	{
+		ptrArr[i] = arrValuesPar[i];
+	}
+}
+
+ArrayManip::~ArrayManip() {
+	delete[] ptrArr;
+}
+
+void ArrayManip::printArray() {
+	for (int i = 0; i < arraySize; i++)
+	{
+		cout << ptrArr[i] << " ";
+	}
+	cout << endl;
+
+}
+
+void ArrayManip::printArrayRev() {
+	for (int i = arraySize - 1; i >= 0; i--)
+	{
+		cout << ptrArr[i] << " ";
+	}
+	cout << endl;
+}
