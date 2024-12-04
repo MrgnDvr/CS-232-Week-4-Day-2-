@@ -1,0 +1,16 @@
+#ifndef _ARRAY_MANIP
+#define _ARRAY_MANIP
+
+class ArrayManip {
+private:
+	int arraySize; //size of the array
+	int* ptrArr; //pointer to an array of integers
+
+public:
+	ArrayManip(int* arrValuesPar, int arraySizePar);
+	~ArrayManip();
+
+	void printArray();
+	void printArrayRev();
+};
+#endif // !_ARRAY_MANIP
